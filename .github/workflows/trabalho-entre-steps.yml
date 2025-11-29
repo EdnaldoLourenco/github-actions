@@ -1,0 +1,22 @@
+name: Primeiro Wokflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  giropops:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confere versão do ubuntu
+        run: cat /etc/os-release
+      
+      - name: Exibir uma mensagem
+        run: echo "Fazendo curso de Github Actions" > mensagem.txt
+
+      - name: Outra coisa
+        run: ls -lha
+
+      - name: Ler conteúdo do arquivo
+        run:  cat mensagem.txt
