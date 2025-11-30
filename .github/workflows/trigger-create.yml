@@ -1,0 +1,12 @@
+name: Create events
+
+on:
+  create
+
+jobs:
+  print-branch-or-tag-creation:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Avisa sobre a criação da branch ou tag
+        run: echo "uma nova branch foi criada no repo"
