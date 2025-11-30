@@ -1,0 +1,27 @@
+name: Desafio 1 Docker Workflow
+
+on:
+	workflow_dispatch:
+		inputs:
+			docker_image:
+				description: "Docker Image"
+				required: true
+
+jobs:
+	docker:
+		runs-on: ubuntu-latest
+		steps:
+			
+			-	name: Pull
+				run: docker pull ${{	github.event.inputs.docker_image	}}
+
+			-	name: List Images
+				run: docker images
+
+			- name: Docker Scout
+        id: docker-scout
+        uses: docker/scout-action@v1
+        with:
+          command: cves
+          image: ${{ github.event.inputs.docker_image }}
+				
