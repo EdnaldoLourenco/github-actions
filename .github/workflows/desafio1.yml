@@ -26,3 +26,4 @@ jobs:
           image: ${{ github.event.inputs.docker_image }}
           dockerhub-user: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub-password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          
