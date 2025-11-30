@@ -1,0 +1,12 @@
+name: Delete events
+
+on:
+  delete
+
+jobs:
+  print-branch-or-tag-delete:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Avisa sobre quando a branch ou tag é deleta
+        run: echo "uma nova branch foi deletada no repo"
