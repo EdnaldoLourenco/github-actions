@@ -1,0 +1,13 @@
+name: Trigger issue
+
+on:
+  issues:
+    types: [opened, edited, milestoned]
+
+jobs:
+  job-issue:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Printa issue
+        run: echo "job triggado por issue"
