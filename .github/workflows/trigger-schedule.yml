@@ -1,0 +1,12 @@
+name: Trigger schedule
+
+on:
+  schedule:
+    - cron: '14 18 * * 1'
+jobs:
+  job-schedule:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Printa schedule
+        run: echo "job triggado por schedule, agora são $(date) UTC"
