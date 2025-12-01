@@ -1,0 +1,14 @@
+name: Trigger pull reques
+
+on:
+  pull_request:
+    types: [opened, edited, closed, reopened]
+    branches:
+      - 'main/**'
+jobs:
+  job-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Printa issue
+        run: echo "job triggado por pull request na branch main"

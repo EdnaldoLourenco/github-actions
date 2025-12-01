@@ -1,0 +1,12 @@
+name: Trigger gollum
+
+on:
+  gollum
+
+jobs:
+  job-gollum:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Printa gollum
+        run: echo "job triggado por alteração na Wiki"
