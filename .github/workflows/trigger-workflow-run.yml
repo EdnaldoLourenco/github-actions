@@ -2,12 +2,12 @@ name: Workflow Run
 
 on:
   workflow_run:
-    workflows: [Chama Workflow compartilhado]
+    workflows: [Chama Workflow Compartilhado]
     types:
       - completed
 
 jobs:
-  fala-o-nome-do-curso:
+  avisa-sobre-termino-do-workflow:
     runs-on: ubuntu-latest
     steps:
       - name: Informa o nome do curso
