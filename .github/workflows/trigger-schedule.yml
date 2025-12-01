@@ -2,11 +2,15 @@ name: Trigger schedule
 
 on:
   schedule:
-    - cron: '14 18 * * 1'
+    - cron: '24 18 * * 1'
+    - cron: '*/5 * * * 1'
 jobs:
   job-schedule:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Printa schedule
-        run: echo "job triggado por schedule, agora são $(date) UTC"
+      - name: Informa Horário
+        if: github.event.schedule == '24 18 * * 1'
+        run: echo "Esse step rodou pois essa execução foi pelo horário agendado"
+      - name: Informa horário
+        run: echo "Ness step passam todos os crons, agora são $(date) UTC"
