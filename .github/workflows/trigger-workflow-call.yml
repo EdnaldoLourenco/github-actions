@@ -1,9 +1,9 @@
-name: Trigger workflow call
+name: Workflow Compartilhado
 
 on: 
   workflow_call:
     inputs:
-      nome-do-curso:
+      nome-do-curso-recebido:
         required: true
         type: string
 
